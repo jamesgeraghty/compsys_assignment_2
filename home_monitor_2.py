@@ -4,10 +4,6 @@
 import RPi.GPIO as GPIO
 import time
 import requests
-import os
-from picamera import PiCamera
-from signal import pause
-import datetime
 
 # Set the GPIO naming convention
 GPIO.setmode(GPIO.BCM)
@@ -18,16 +14,12 @@ GPIO.setwarnings(False)
 # Set a variable to hold the GPIO Pin identity
 pinpir = 17
 
-camera = PiCamera()
-
 # Set GPIO pin as input
 GPIO.setup(pinpir, GPIO.IN)
 
 # Variables to hold the current and last states
 currentstate = 0
 previousstate = 0
-camera.start_preview()
-frame = 1
 
 try:
 	print("Waiting for PIR to settle ...")
@@ -59,24 +51,7 @@ try:
 			#Wait 120 seconds before looping again
 			print("Waiting 5 seconds")
 			time.sleep(5)
-                     
-			camera.rotation = 180 
-                       #coverting video from .h264 to .mp4
-			command = "MP4Box -add alert_video.h264 alert_video.mp4"
-			camera.start_recording('alert_video.h264')
-			camera.wait_recording(2)
-			camera.stop_recording()			
-			print("video converted")
-
-			fileLoc = f'/home/pi/assignment2/img/frame{frame}.jpg' # set location o$
-			currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-	
-			camera.capture(fileLoc) # capture image and store in fileLoc
-			print(f'frame {frame} taken at {currentTime}') # print frame number to con$
-			storeFileFB.store_file(fileLoc)
-			storeFileFB.push_db(fileLoc, currentTime)
-			frame += 1
-	
+			
 		# If the PIR has returned to ready state
 		elif currentstate == 0 and previousstate == 1:
 		
