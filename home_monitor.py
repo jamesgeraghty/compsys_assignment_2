@@ -9,6 +9,7 @@ from picamera import PiCamera
 from signal import pause
 import datetime
 import storeFileFB
+from subprocess import call 
 
 # Set the GPIO naming convention
 GPIO.setmode(GPIO.BCM)
@@ -67,6 +68,9 @@ try:
 			camera.start_recording('alert_video.h264')
 			camera.wait_recording(2)
 			camera.stop_recording()			
+			command = "MP4Box -add alert_video.h264 alert_video.mp4"
+			call([command], shell=True)
+
 			print("video converted")
 
 			fileLoc = f'/home/pi/assignment2/img/frame{frame}.jpg' # set location o$
