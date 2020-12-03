@@ -8,6 +8,7 @@ import os
 from picamera import PiCamera
 from signal import pause
 import datetime
+import storeFileFB
 
 # Set the GPIO naming convention
 GPIO.setmode(GPIO.BCM)
