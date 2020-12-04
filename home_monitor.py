@@ -52,7 +52,7 @@ try:
 		
 			print("Motion detected!")
 			
-			# Your IFTTT URL with event name, key and json parameters (values)
+			#  IFTTT URL with event name, key and json parameters to trigger smart plug (values)
 			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dIpYgD3DMuLS4HrXYwadC4', params={"value1":"none","value2":"none","value3":"none"})
 			
 			# Record new previous state
@@ -63,19 +63,18 @@ try:
 			time.sleep(5)
                      
 			camera.rotation = 180 
-                       #coverting video from .h264 to .mp4
 			command = "MP4Box -add alert_video.h264 alert_video.mp4"
 			camera.start_recording('alert_video.h264')
-			camera.wait_recording(2)
+			camera.wait_recording(5)
 			camera.stop_recording()			
 			command = "MP4Box -add alert_video.h264 alert_video.mp4"
 			call([command], shell=True)
 
 			print("video converted")
 
-			fileLoc = f'/home/pi/assignment2/img/frame{frame}.jpg' # set location o$
+			fileLoc = f'/home/pi/assignment2/compsys_assignment_2/video.mp4/frame{frame}.jpg' # set location o$
 			currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-	
+
 			camera.capture(fileLoc) # capture image and store in fileLoc
 			print(f'frame {frame} taken at {currentTime}') # print frame number to con$
 			storeFileFB.store_file(fileLoc)
