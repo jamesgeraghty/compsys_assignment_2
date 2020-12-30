@@ -2,6 +2,7 @@
 from wia import Wia
 from sense_hat import SenseHat
 import  time
+import requests
 
 sense = SenseHat()
 sense.clear()
@@ -13,4 +14,4 @@ while True:
    time.sleep(10)
    wia.Event.publish(name="Temperature Update", data=temp)
    print(temp)
-
+   r = requests.post('https://maker.ifttt.com/trigger/Too_Cold/with/key/dIpYgD3DMuLS4HrXYwadC4', params={"value1":"none","value2":"none","value3":"none"})
