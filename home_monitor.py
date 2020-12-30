@@ -39,7 +39,7 @@ try:
 	
 		currentstate = 0
 
-	print("    Ready")
+	print("Ready")
 	
 	# Loop until users quits with CTRL-C
 	while True:
@@ -60,8 +60,8 @@ try:
 			
 			#Wait 120 seconds before looping again
 			print("Waiting 5 seconds")
-			time.sleep(10)
-                     
+			time.sleep(30)
+                        
 			camera.rotation = 180 
 			command = "MP4Box -add alert_video.h264 alert_video.mp4"
 			camera.start_recording('alert_video.h264')
