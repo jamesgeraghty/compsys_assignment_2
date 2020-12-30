@@ -60,7 +60,7 @@ try:
 			
 			#Wait 120 seconds before looping again
 			print("Waiting 5 seconds")
-			time.sleep(5)
+			time.sleep(10)
                      
 			camera.rotation = 180 
 			command = "MP4Box -add alert_video.h264 alert_video.mp4"

@@ -23,4 +23,4 @@ while True:
         press=round(sense.get_pressure(),2)
         hum=round(sense.get_humidity(),2)
         writeData(temp,press,hum)
-        time.sleep(10)
+        time.sleep(20)
