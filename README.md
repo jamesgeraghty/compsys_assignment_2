@@ -8,4 +8,4 @@ A home monitoring system that allows the user to track various data metrics acor
 ## Platforms Used 
 Thingspeak is used to handle the data collected from the sense hat. 
 WIA is used to display data in 
-
+FireBase is used to store the images saved from the motion sensor.
