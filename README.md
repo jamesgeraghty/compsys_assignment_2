@@ -8,11 +8,17 @@ This is a home monitoring system that allows the user to track various data metr
 This information is then used to trigger some smart home device.  The data can be viewed in one place through a HTML page. There are a total of three programmes runnning at once. The first program detects motion using a PIR motion sensor attached to a camera, when motion is detected it the
 
 
+
+
+
 >**Programming Languages Used**
 ---
 - Python - Due to its user friendly data structures and the extensive support libraies available, Python is primarily used to write the programs for this project. 
 
 - JavaScript - When buliding the cross plaform app between Firebase and Glitch, 
+
+
+
 
 >**Physical Devices**
 ---
