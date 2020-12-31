@@ -10,7 +10,7 @@ This information is then used to trigger some smart home device.  The data can b
 
 >**Programming Languages Used**
 ---
-Python - Due to its user friend data structures and the extensive support libraies available, Python is primarily used to write the programs for this project. 
+Python - Due to its user friendly data structures and the extensive support libraies available, Python is primarily used to write the programs for this project. 
 
 JavaScript - When buliding the cross plaform app between Firebase and Glitch, 
 
@@ -24,7 +24,7 @@ Sense Hat Black Hat Hack3r
 
 PIR Motion Sensor
 
-MicroSoft Webcam
+Micro Soft Webcam
 
 
 
