@@ -1,6 +1,6 @@
 ## Read Me
 James Geraghty 20022946 - Computer Systems Assignment 2
-<p>&nbsp;</p>
+
 ---
 
 > **Description**
@@ -36,7 +36,7 @@ Micro Soft Webcam
 
 
 
-
+<p>&nbsp;</p>
 
 > **IOT Platforms Used**
 ---
@@ -47,7 +47,7 @@ The WIA platform is used to display data collected from the Raspberry Pi and sen
 IFTTT is used to create webhooks that allows the data collected from the Raspberry Pi to trigger various smart home devices. When the temperature in the room goes below 25 degrees, this causes the smart plug that is connected to a radiator to turn on. An email is also sent to the user to notifiy the user. 
 When is motion is detected by the PIR motion sensor, the smart buld is triggered. 
 
-
+<p>&nbsp;</p>
 
 
 >**Data Storage**
