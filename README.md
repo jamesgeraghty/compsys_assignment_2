@@ -1,7 +1,8 @@
 ## Read Me
 James Geraghty 20022946 - Computer Systems Assignment 2
----
 <p>&nbsp;</p>
+---
+
 > **Description**
 ---
 This is a home monitoring system that allows the user to track various data metrics acorss a number of platforms. A Raspberry PI  model 3B is powering all the programs.
