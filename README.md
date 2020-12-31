@@ -1,6 +1,7 @@
 ## Read Me
 James Geraghty 20022946 - Computer Systems Assignment 2
 ---
+<p>&nbsp;</p>
 > **Description**
 ---
 This is a home monitoring system that allows the user to track various data metrics acorss a number of platforms. A Raspberry PI  model 3B is powering all the programs.
@@ -8,7 +9,7 @@ This is a home monitoring system that allows the user to track various data metr
 This information is then used to trigger some smart home device.  The data can be viewed in one place through a HTML page. There are a total of three programmes runnning at once. The first program detects motion using a PIR motion sensor attached to a camera, when motion is detected it the
 
 
-
+<p>&nbsp;</p>
 
 
 >**Programming Languages Used**
@@ -17,7 +18,7 @@ This information is then used to trigger some smart home device.  The data can b
 
 - JavaScript - When buliding the cross plaform app between Firebase and Glitch, 
 
-
+<p>&nbsp;</p>
 
 
 >**Physical Devices**
