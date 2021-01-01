@@ -15,7 +15,7 @@ The third program displays the temperature of the room. This is recorded every 1
 
 A live web cam server is also connected to the Raspberry Pi, they allows the user to see a live video picture from the outside of the house. 
 
-
+![](images/collage.jpg)
 
 <p>&nbsp;</p>
 
