@@ -1,0 +1,54 @@
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  text-align: center;
+  background-image: url("https://cdn.glitch.com/8bae26d5-efba-4757-b1ac-f7d6bea6932c%2Fhome.jpg?v=1609361970278");
+  background-size: cover;
+  padding: 40px;
+}
+
+
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+  
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #70afff;
+  font-family:'Poppins', sans-serif;
+    
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+   width: 30%;
+  
+}
+
+.nav-links a {
+  text-decoration:none;
+  color:  #ffffff;
+}
+
+h1 {
+  
+  color: #d81371
+}
+
+img {
+  border-radius: 8px;
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+<div style="background-image: url('home.jpg');">
