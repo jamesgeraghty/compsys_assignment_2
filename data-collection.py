@@ -6,6 +6,7 @@ import  time
 from sense_hat import SenseHat
 
 WRITE_API_KEY='X8TVD7UIF66ZB90Y'
+#WRITE_API_KEY='K7BQC604JUO00YY6'
 
 baseURL='https://api.thingspeak.com/update?api_key=%s' % WRITE_API_KEY
 
@@ -23,4 +24,4 @@ while True:
         press=round(sense.get_pressure(),2)
         hum=round(sense.get_humidity(),2)
         writeData(temp,press,hum)
-        time.sleep(60)
+        time.sleep(5)

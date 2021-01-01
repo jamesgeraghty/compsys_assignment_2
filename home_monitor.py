@@ -1,6 +1,6 @@
 #! /usr/bin/python
 
-# Imports
+# Importing the libraries
 import RPi.GPIO as GPIO
 import time
 import requests
@@ -32,7 +32,7 @@ camera.start_preview()
 frame = 1
 
 try:
-	print("Waiting for PIR to settle ...")
+	print("Setting up the motion sensor")
        	
 	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
@@ -67,7 +67,7 @@ try:
 			camera.start_recording('alert_video.h264')
 			camera.wait_recording(5)
 			camera.stop_recording()			
-			command = "MP4Box -add alert_video.h264 alert_video.mp4"
+			command = "MP4Box - add alert_video.h264 alert_video.mp4"
 			call([command], shell=True)
 
 			print("video converted")
@@ -87,7 +87,7 @@ try:
 			print("Ready")
 			previousstate = 0
 
-		# Wait for 10 milliseconds
+		# Wait for 10 milliseconds to start again
 		time.sleep(0.01)
 
 except KeyboardInterrupt:
