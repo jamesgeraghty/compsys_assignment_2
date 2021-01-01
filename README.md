@@ -49,6 +49,8 @@ The WIA platform is used to display data collected from the Raspberry Pi and sen
 IFTTT is used to create webhooks that allows the data collected from the Raspberry Pi to trigger various smart home devices. When the temperature in the room goes below 25 degrees, this causes the smart plug that is connected to a radiator to turn on. An email is also sent to the user to notify the user. 
 When is motion is detected by the PIR motion sensor, the smart build is triggered. 
 
+![](images/live%20stream.png)
+
 <p>&nbsp;</p>
 
 
