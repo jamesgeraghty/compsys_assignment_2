@@ -7,7 +7,14 @@ James Geraghty 20022946 - Computer Systems Assignment 2
 ---
 This is a home monitoring system that allows the user to track various data metrics across a number of IoT platforms. A Raspberry PI model 3B is powering all the programs.
 
-This information is then used to trigger some smart home device.  The data can be viewed in one place through a HTML page. There are a total of three programmes running at once. The first program detects motion using a PIR motion sensor attached to a camera, when motion is detected it the
+This information is then used to trigger some smart home device.  The data can be viewed in one place through a HTML page. This page is hosted on a web server that was setup on the Raspberry Pi.  There are a total of three programmes running at once. The first program detects motion using a PIR motion sensor attached to a camera. When motion is detected it triggers a webhook that is linked to a smart home bulb, at the same time a picture is take and sent the Firebase database.
+
+The second programme is recording room data. Room humidity, pressure and temperature are being recorded and displayed on a graph that is viewed on the webpage. When the tempErature dips below 20 degrees a second webhook triggers a smart plug that is connected to a raditor in the room. 
+
+The third program displays the temperature of the room. This is recorded every 15 minutes and is displayed on a widget. The temperature data is recorded in JSON format and be stored and queried using MongoDB.
+
+A live web cam server is also connected to the Raspberry Pi, they allows the user to see a live video picture from the outside of the house. 
+
 
 
 <p>&nbsp;</p>
