@@ -53,8 +53,9 @@ Thingspeak -  is used to handle the data collected from the sense hat. Temperatu
 
 The WIA platform is used to display data collected from the Raspberry Pi and sense hat. A widget is displays the data, this is then published on the HTML page. The data collected is saved in json file. This is then downloaded and import to a MongoDB, various queries can be used to get make a more details analysis of the  data collected. A HTTP request triggers 
 
-IFTTT is used to create webhooks that allows the data collected from the Raspberry Pi to trigger various smart home devices. When the temperature in the room goes below 25 degrees, this causes the smart plug that is connected to a radiator to turn on. An email is also sent to the user to notify the user. 
-When is motion is detected by the PIR motion sensor, the smart build is triggered. 
+IFTTT is used to create webhooks that allows the data collected from the Raspberry Pi to trigger various smart home devices. When the temperature in the room goes below 17 degrees, this causes the smart plug that is connected to a radiator to turn on. An email is also sent to the user to notify the user. 
+When is motion is detected by the PIR motion sensor, the smart bulb is triggered. When the temperature goes above 25 the smart buld is turned off. 
+
 
 ![](images/live%20stream.png)
 
@@ -63,4 +64,7 @@ When is motion is detected by the PIR motion sensor, the smart build is triggere
 
 >**Data Storage**
 ---
-- FireBase is used to store the images saved from the motion sensor program. This broker topology to publish the event data to Firebase.  
+- FireBase is used to store the images saved from the motion sensor program. This broker topology to publish the event data to Firebase. 
+
+
+![](images/firebase.png)
