@@ -57,7 +57,7 @@ IFTTT is used to create webhooks that allows the data collected from the Raspber
 When is motion is detected by the PIR motion sensor, the smart bulb is triggered. When the temperature goes above 25 the smart buld is turned off. 
 
 
-![](images/live%20stream.png)
+![](images/applets.png)
 
 <p>&nbsp;</p>
 
