@@ -43,7 +43,7 @@ A live web cam server is also connected to the Raspberry Pi, they allows the use
 
 - Micro Soft Webcam
 
-![](images/rpi1.png)![](images/rpi2.png)
+![](images/rpi1.png)  ![](images/rpi2.png)
 
 <p>&nbsp;</p>
 
