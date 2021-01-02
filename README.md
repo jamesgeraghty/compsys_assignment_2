@@ -70,3 +70,6 @@ When is motion is detected by the PIR motion sensor, the smart bulb is triggered
 ![](images/firebase.png)
 
 
+Tempreature data collected from the WIA widget is stored in the JSON format. MongoDB can stoer the data collected and 
+
+
