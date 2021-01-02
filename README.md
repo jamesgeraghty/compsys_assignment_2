@@ -64,7 +64,9 @@ When is motion is detected by the PIR motion sensor, the smart bulb is triggered
 
 >**Data Storage**
 ---
-- FireBase is used to store the images saved from the motion sensor program. This broker topology to publish the event data to Firebase. The Data is store as a JSON and then synchronised in relatime to anyone who is connected. 
+- FireBase is used to store the images saved from the motion sensor program. This broker topology to publish the event data to Firebase. This data is stored as a JSON and then synchronised in relatime to anyone who is connected. 
 
 
 ![](images/firebase.png)
+
+
