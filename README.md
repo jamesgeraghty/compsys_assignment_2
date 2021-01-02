@@ -43,7 +43,7 @@ A live web cam server is also connected to the Raspberry Pi, they allows the use
 
 - Micro Soft Webcam
 
-
+![](images/rpi1.png)![](images/rpi2.png)
 
 <p>&nbsp;</p>
 
@@ -64,7 +64,7 @@ When is motion is detected by the PIR motion sensor, the smart bulb is triggered
 
 >**Data Storage**
 ---
-- FireBase is used to store the images saved from the motion sensor program. This broker topology to publish the event data to Firebase. 
+- FireBase is used to store the images saved from the motion sensor program. This broker topology to publish the event data to Firebase. The Data is store as a JSON and then synchronised in relatime to anyone who is connected. 
 
 
 ![](images/firebase.png)
