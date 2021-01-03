@@ -64,7 +64,7 @@ When is motion is detected by the PIR motion sensor, the smart bulb is triggered
 
 >**Data Storage**
 ---
-- FireBase Realtime Database is used to store the images saved from the motion sensor program. This broker topology is used to publish the event data to Firebase. This data is stored as a JSON and then synchronised in realtime to anyone who is connected. The Firebase API makes is easy for data to accessed through a web application. The data is remains available even when the application goes offline. Everytime motion is detected with the PIR sensor, a photograph is taken with the Raspberry Pi camera and then it published to the Firebase database. 
+- FireBase Realtime Database is used to store the images saved from the motion sensor program. This broker topology is used to publish the event data to Firebase. This data is stored as a JSON and then synchronised in realtime to anyone who is connected. The Firebase API makes is easy for data to accessed through a web application. The data is remains available even when the application goes offline. Everytime motion is detected from the PIR sensor, a photograph is taken with the Raspberry Pi camera and then it published to the Firebase database. The Glitch application is connected to the Firebase through web sockets. The data is then syncs throught the web socket automatcially
 
 
 ![](images/firebase.png)
