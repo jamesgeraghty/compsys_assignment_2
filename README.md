@@ -72,5 +72,5 @@ When is motion is detected by the PIR motion sensor, the smart bulb is triggered
 
 Tempreature data collected from the WIA widget is stored in the JSON format. MongoDB can store the data collected and then it can accessed at anytime. 
 
-![](images/momgoDB.png)
+![](images/mongoDB.jpg)
 
