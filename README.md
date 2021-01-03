@@ -76,5 +76,5 @@ Tempreature data collected from the WIA widget is stored in the JSON format. Mon
 
 > **Resources**
 ---
-* [PiHut] (https://thepihut.com/blogs/raspberry-pi-tutorials/using-ifttt-with-the-raspberry-pi)
+* [PiHut](https://thepihut.com/blogs/raspberry-pi-tutorials/using-ifttt-with-the-raspberry-pi)
 
