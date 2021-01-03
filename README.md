@@ -49,9 +49,9 @@ A live web cam server is also connected to the Raspberry Pi, they allow the user
 
 > **IOT Platforms Used**
 ---
-Thingspeak -  is used to handle the data collected from the sense hat. Temperature, humidity and pressure data is collected and this data is then displayed on a HTML page in a graph. There are  number of 'Reacts' created in Thingspeak
+Thingspeak - is used to handle the data collected from the sense hat. Temperature, humidity, and pressure data is collected, and this data is then displayed on a HTML page in a graph. There are number of 'Reacts' created in Thingspeak that allows you to trigger HTTP requests when a certain condition has been met. In this case when the temperature is below 17 degrees in the room, a HTTP request triggers the smart home plug to switch on. In reverse when the temperature gets to above 25 degrees a second trigger will turn off the smart plug. A "No Data Check" react, checks to see if data has been received at least once every 60 minutes. If there is no data being recorded the subscriber will be notified through email that there may be connection issue.
 
-The WIA platform is used to display data collected from the Raspberry Pi and sense hat. A widget is displays the data, this is then published on the HTML page. The data collected is saved in json file. This is then downloaded and import to a MongoDB, various queries can be used to get make a more details analysis of the  data collected. A HTTP request triggers 
+The WIA platform is used to display data collected from the Raspberry Pi and sense hat through a simple Python program. A widget displays the the cuurent data in numeric form, this is then published on the HTML page. The data collected is saved in json file. This is then downloaded and import to a MongoDB, various queries can be used to get make a more details analysis of the  data collected. A HTTP request triggers 
 
 IFTTT is used to create webhooks that allows the data collected from the Raspberry Pi to trigger various smart home devices. When the temperature in the room goes below 17 degrees, this causes the smart plug that is connected to a radiator to turn on. An email is also sent to the user to notify the user. 
 When is motion is detected by the PIR motion sensor, the smart bulb is triggered. When the temperature goes above 25 the smart buld is turned off. 
