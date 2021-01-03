@@ -1,4 +1,4 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 
 # Imports
 import RPi.GPIO as GPIO
@@ -9,7 +9,6 @@ from picamera import PiCamera
 from signal import pause
 import datetime
 import storeFileFB
-from subprocess import call 
 
 # Set the GPIO naming convention
 GPIO.setmode(GPIO.BCM)
@@ -32,9 +31,9 @@ camera.start_preview()
 frame = 1
 
 try:
-	print("Setting up  PIR motion sensor to settle ...")
+	print("Waiting for PIR to settle ...")
        	
-	# keep looping until PIR output is 0
+	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
 	
 		currentstate = 0
@@ -52,7 +51,7 @@ try:
 		
 			print("Motion detected!")
 			
-			#  IFTTT URL with event name, key and json parameters to trigger smart plug (values)
+			# Your IFTTT URL with event name, key and json parameters (values)
 			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dIpYgD3DMuLS4HrXYwadC4', params={"value1":"none","value2":"none","value3":"none"})
 			
 			# Record new previous state
@@ -60,21 +59,19 @@ try:
 			
 			#Wait 120 seconds before looping again
 			print("Waiting 5 seconds")
-			time.sleep(10)
+			time.sleep(5)
                      
 			camera.rotation = 180 
+                       #coverting video from .h264 to .mp4
 			command = "MP4Box -add alert_video.h264 alert_video.mp4"
 			camera.start_recording('alert_video.h264')
-			camera.wait_recording(5)
+			camera.wait_recording(2)
 			camera.stop_recording()			
-			command = "MP4Box -add alert_video.h264 alert_video.mp4"
-			call([command], shell=True)
-
 			print("video converted")
 
-			fileLoc = f'/home/pi/assignment2/compsys_assignment_2/video.mp4/frame{frame}.jpg' # set location o$
+			fileLoc = f'/home/pi/assignment2/img/frame{frame}.jpg' # set location o$
 			currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-
+	
 			camera.capture(fileLoc) # capture image and store in fileLoc
 			print(f'frame {frame} taken at {currentTime}') # print frame number to con$
 			storeFileFB.store_file(fileLoc)

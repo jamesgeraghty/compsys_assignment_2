@@ -29,9 +29,8 @@
         <li><a href = "https://github.com/jamesgeraghty/compsys_assignment_2">Git Repo</a></li>
       </ul>
     </nav>
-  <br>
-      
-    <h2>Raspberry Pi Home Monitor</h2>
+    
+    <h3>Raspberry Pi Home Monitor</h3>
     <p>
       Motion detected at <span id="time"></span>: <br>
       <img id="photo" />
@@ -40,20 +39,19 @@
   <br>
   <br>
   <br>
+<h3>Data Collection Dashboard</h3>
 </head>
 <body>
 
 <tr><td colspan="2">
   
-<h2 align="center" color="#00FFFF">Data Collection Dashboard</h2>
-  <br>
+<h1 align="center" color="#00FFFF">Data Collection Dashboard</h1>
 </td></tr>
 <tr><td>
 <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1203910/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
 </td>
 <td><iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1203910/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
-</td></tr>
-<tr><td>
+</td></tr><tr><td>
 </td>
 <td>
 <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1203910/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
