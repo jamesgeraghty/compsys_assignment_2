@@ -81,5 +81,6 @@ Tempreature data collected from the WIA widget is stored in the JSON format. Mon
 * [Publishing Events with WIA.io](https://developers.wia.io/wia-cloud/publish-an-event)
 * [Build a motion detection system with a Raspberry Pi](https://opensource.com/article/20/11/motion-detection-raspberry-pi)
 * [Make Raspberry Pi Webcam Server](https://www.instructables.com/How-to-Make-Raspberry-Pi-Webcam-Server-and-Stream-/)
+* [Connect and control Raspberry Pi motion detector PIR](https://tutorials-raspberrypi.com/connect-and-control-raspberry-pi-motion-detector-pir/)
 
 
