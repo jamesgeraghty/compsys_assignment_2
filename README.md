@@ -67,13 +67,13 @@ IFTTT is used to create webhooks that allows the data collected from the Raspber
 
 >**Data Storage**
 ---
-- FireBase Realtime Database is used to store the images saved from the motion sensor program. This broker topology is used to publish the event data to Firebase. This data is stored as a JSON and then synchronised in realtime to anyone who is connected. The Firebase API makes is easy for data to accessed through a web application. The data is remains available even when the application goes offline. Everytime motion is detected from the PIR sensor, a photograph is taken with the Raspberry Pi camera and then it published to the Firebase database. The Glitch application is connected to the Firebase through web sockets. The data is then syncs throught the web socket automatcially
+- FireBase Realtime Database is used to store the images saved from the motion sensor program. This broker topology is used to publish the event data to Firebase. This data is stored as a JSON and then synchronised in real-time to anyone who is connected. The Firebase API makes is easy for data to accessed through a web application. The data remains available even when the application goes offline. Every time motion is detected from the PIR sensor, a photograph is taken with the Raspberry Pi camera and then it published to the Firebase database. Firebase uses websockets which are faster than HTTP requests, this that allows the server to push data to the client. The Glitch application is connected to the Firebase through web sockets. The data is then syncs through the web socket automatically and publishes the latest picture that has been taken.
 
 
 ![](images/firebase.png)
 
 
-Tempreature data collected from the WIA widget is stored in the JSON format. MongoDB can store the data collected and then it can accessed at anytime. 
+- MongoDD - Temperature data collected from the WIA widget is stored in the JSON format. MongoDB can store the data collected and then it can accessed at anytime. The MongoDB document format means that it can accessed from any language, in data 
 
 ![](images/mongoDB.jpg)
 
