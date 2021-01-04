@@ -34,12 +34,12 @@ frame = 1
 try:
 	print("Setting up the motion sensor")
        	
-	# Loop until PIR output is 0
+	# keeps looping until PIR senor output is 0
 	while GPIO.input(pinpir) == 1:
 	
 		currentstate = 0
 
-	print("Ready")
+	print("PIR is now ready")
 	
 	# Loop until users quits with CTRL-C
 	while True:
@@ -53,7 +53,7 @@ try:
 			print("Motion detected!")
 			
 			#  IFTTT URL with event name, key and json parameters to trigger smart plug (values)
-			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dIpYgD3DMuLS4HrXYwadC4', params={"value1":"none","value2":"none","value3":"none"})
+			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dhEW-AaaxrgTc5xQdZhgqA', params={"value1":"none","value2":"none","value3":"none"})
 			
 			# Record new previous state
 			previousstate = 1
@@ -87,7 +87,7 @@ try:
 			print("Ready")
 			previousstate = 0
 
-		# Wait for 10 milliseconds to start again
+		# Wait for 10 milliseconds to start the application  again
 		time.sleep(0.01)
 
 except KeyboardInterrupt:

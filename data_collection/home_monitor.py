@@ -52,14 +52,14 @@ try:
 			print("Motion detected!")
 			
 			# Your IFTTT URL with event name, key and json parameters (values)
-			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dIpYgD3DMuLS4HrXYwadC4', params={"value1":"none","value2":"none","value3":"none"})
+			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dhEW-AaaxrgTc5xQdZhgqA', params={"value1":"none","value2":"none","value3":"none"})
 			
 			# Record new previous state
 			previousstate = 1
 			
 			#Wait 120 seconds before looping again
-			print("Waiting 5 seconds")
-			time.sleep(5)
+			print("Waiting 60 seconds")
+			time.sleep(60)
                      
 			camera.rotation = 180 
                        #coverting video from .h264 to .mp4
