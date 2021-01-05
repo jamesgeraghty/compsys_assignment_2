@@ -51,7 +51,7 @@ A live web cam server is also connected to the Raspberry Pi, they allow the user
 ---
 Thingspeak - is used to handle the data collected from the sense hat. Temperature, humidity, and pressure data is collected, and this data is then displayed on a HTML page in a graph. There are number of 'Reacts' created in Thingspeak that allows you to trigger HTTP requests when a certain condition has been met. In this case when the temperature is below 17 degrees in the room, a HTTP request triggers the smart home plug to switch on. In reverse when the temperature gets to above 25 degrees a second trigger will turn off the smart plug. A "No Data Check" react, checks to see if data has been received at least once every 60 minutes. If there is no data being recorded the subscriber will be notified through email that there may be connection issue.
 
-![](images/thingspeak.png)
+![](images/thingspeak2.jpg)
 
 The WIA platform is very user friendly and allows the user to easily and display data collected from the Raspberry Pi and sense hat through a simple Python program. A widget displays the current data in numeric form, this is then published on the HTML page. The data collected is saved in json file. This is then downloaded and import to a MongoDB, various queries can be used to get make a more detailed analysis of the data collected. A HTTP request triggers
 ![](images/wia.png)
