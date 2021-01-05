@@ -24,7 +24,7 @@ A live web cam server is also connected to the Raspberry Pi, they allow the user
 ---
 - Python - Due to its user-friendly data structures and the extensive support libraries available, Python is primarily used to write the programs for this project. 
 
-- JavaScript - When building the cross platform app between Firebase and Glitch, 
+- JavaScript - When building the cross platform app between Firebase and Glitch, Javascript was used to implement the link between the data and the web applcation. WIA MQTT api collects temperature data from through the sense hat. 
 
 - HTML and CSS - are used to design the website that displays the information collected from the Raspberry PI.
 
