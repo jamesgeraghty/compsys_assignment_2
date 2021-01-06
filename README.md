@@ -9,7 +9,7 @@ This is a home monitoring system that allows the user to track various data metr
 
 This information is then used to trigger some smart home device.  The data can be viewed in one place through a HTML page. This page is hosted on a web server that was setup on the Raspberry Pi.  There are a total of three programmes running at once. The first program detects motion using a PIR motion sensor attached to a camera. When motion is detected it triggers a webhook that is linked to a smart home bulb, at the same time an image is capture using the raspberry Pi Camera and sent the Firebase database.
 
-The second programme is recording room data. Room humidity, pressure and temperature  are being recorded and displayed on a graph that is viewed on the webpage. When the tempErature dips below 20 degrees a second webhook triggers a smart plug that is connected to a radiator in the room. 
+The second programme is recording room data. Room humidity, pressure and temperature  are being recorded and displayed on a graph that is viewed on the webpage. When the temperature dips below 20 degrees a second webhook triggers a smart plug that is connected to a radiator in the room. 
 
 The third program displays the temperature of the room. This is recorded every 15 minutes and is displayed on a widget. The temperature data is recorded in JSON format and be stored and queried using MongoDB.
 
@@ -24,7 +24,7 @@ A live web cam server is also connected to the Raspberry Pi, they allow the user
 ---
 - Python - Due to its user-friendly data structures and the extensive support libraries available, Python is primarily used to write the programs for this project. 
 
-- JavaScript - When building the cross platform app between Firebase and Glitch, Javascript was used to implement the link between the data and the web applcation. WIA MQTT api collects temperature data from through the sense hat. 
+- JavaScript - When building the cross platform app between Firebase and Glitch, JavaScript  was used to implement the link between the data and the web application. WIA MQTT API collects temperature data from through the sense hat. 
 
 - HTML and CSS - are used to design the website that displays the information collected from the Raspberry PI.
 
