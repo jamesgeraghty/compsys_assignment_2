@@ -1,6 +1,6 @@
-#! /usr/bin/python
+#! /usr/bin/python3
 
-# Importing the libraries
+# Imports
 import RPi.GPIO as GPIO
 import time
 import requests
@@ -9,7 +9,6 @@ from picamera import PiCamera
 from signal import pause
 import datetime
 import storeFileFB
-from subprocess import call 
 
 # Set the GPIO naming convention
 GPIO.setmode(GPIO.BCM)
@@ -32,14 +31,14 @@ camera.start_preview()
 frame = 1
 
 try:
-	print("Setting up the motion sensor")
+	print("Waiting for PIR to settle ...")
        	
-	# keeps looping until PIR senor output is 0
+	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
 	
 		currentstate = 0
 
-	print("PIR is now ready")
+	print("    Ready")
 	
 	# Loop until users quits with CTRL-C
 	while True:
@@ -52,7 +51,7 @@ try:
 		
 			print("Motion detected!")
 			
-			#  IFTTT URL with event name, key and json parameters to trigger smart plug (values)
+			# Your IFTTT URL with event name, key and json parameters (values)
 			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dhEW-AaaxrgTc5xQdZhgqA', params={"value1":"none","value2":"none","value3":"none"})
 			
 			# Record new previous state
@@ -61,20 +60,18 @@ try:
 			#Wait 120 seconds before looping again
 			print("Waiting 5 seconds")
 			time.sleep(5)
-                        
+                     
 			camera.rotation = 180 
+                       #coverting video from .h264 to .mp4
 			command = "MP4Box -add alert_video.h264 alert_video.mp4"
 			camera.start_recording('alert_video.h264')
-			camera.wait_recording(5)
+			camera.wait_recording(2)
 			camera.stop_recording()			
-			command = "MP4Box - add alert_video.h264 alert_video.mp4"
-			call([command], shell=True)
-
 			print("video converted")
 
-			fileLoc = f'/home/pi/assignment2/compsys_assignment_2/video.mp4/frame{frame}.jpg' # set location o$
+			fileLoc = f'/home/pi/assignment2/img/frame{frame}.jpg' # set location o$
 			currentTime = datetime.datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-
+	
 			camera.capture(fileLoc) # capture image and store in fileLoc
 			print(f'frame {frame} taken at {currentTime}') # print frame number to con$
 			storeFileFB.store_file(fileLoc)
@@ -87,7 +84,7 @@ try:
 			print("Ready")
 			previousstate = 0
 
-		# Wait for 10 milliseconds to start the application  again
+		# Wait for 10 milliseconds
 		time.sleep(0.01)
 
 except KeyboardInterrupt:

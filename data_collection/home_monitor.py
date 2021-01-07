@@ -1,4 +1,5 @@
 #! /usr/bin/python3
+# James Geraghty - 20022946 Compsys Assignment 2 
 
 # Imports
 import RPi.GPIO as GPIO
@@ -31,7 +32,7 @@ camera.start_preview()
 frame = 1
 
 try:
-	print("Waiting for PIR to settle ...")
+	print("Waiting for motion sensor to get ready ...")
        	
 	# Loop until PIR output is 0
 	while GPIO.input(pinpir) == 1:
@@ -40,7 +41,7 @@ try:
 
 	print("    Ready")
 	
-	# Loop until users quits with CTRL-C
+	# Loops until the program is cancelled
 	while True:
 	
 		# Read PIR state
@@ -51,15 +52,15 @@ try:
 		
 			print("Motion detected!")
 			
-			# Your IFTTT URL with event name, key and json parameters (values)
+			# IFTTT webhook URL
 			r = requests.post('https://maker.ifttt.com/trigger/motion_detected/with/key/dhEW-AaaxrgTc5xQdZhgqA', params={"value1":"none","value2":"none","value3":"none"})
 			
 			# Record new previous state
 			previousstate = 1
 			
 			#Wait 120 seconds before looping again
-			print("Waiting 60 seconds")
-			time.sleep(60)
+			print("Waiting 10 seconds")
+			time.sleep(10)
                      
 			camera.rotation = 180 
                        #coverting video from .h264 to .mp4
@@ -78,7 +79,7 @@ try:
 			storeFileFB.push_db(fileLoc, currentTime)
 			frame += 1
 	
-		# If the PIR has returned to ready state
+		# If the PIR motion is returned to ready
 		elif currentstate == 0 and previousstate == 1:
 		
 			print("Ready")
