@@ -1,5 +1,6 @@
 /* CSS files add styling rules to your content */
 
+  
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
@@ -22,7 +23,7 @@ nav{
   justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #70afff;
+  background-color: #444fc9;
   font-family:'Poppins', sans-serif;
     
 }
@@ -30,7 +31,7 @@ nav{
 .nav-links{
   display: flex;
   justify-content: space-around;
-   width: 30%;
+  width: 30%;
   
 }
 
@@ -46,15 +47,16 @@ h1 {
 
 img {
   border-radius: 8px;
-  max-width: 50%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 80%;
+}
+
+.nav-links li
+{
+list-style: none;
 }
 <div style="background-image: url('home.jpg');">
-
-
-
-
